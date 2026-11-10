@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -569,87 +568,6 @@ var Chess=function(r){var u="b",s="w",l=-1,_="p",A="n",S="b",m="r",y="q",p="k",t
   }
 
   .phrase-list span { color: #9aa6c4; line-height: 1.4; }
-
-  .phrase-only {
-    display: inline-block;
-    margin-right: 6px;
-    padding: 1px 6px;
-    font-size: 0.58rem;
-    font-style: normal;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #16181f;
-    background: #e0b055;
-    border-radius: 999px;
-    vertical-align: 1px;
-  }
-
-  .admin-row-actions select {
-    width: auto;
-    margin-bottom: 0;
-    padding: 7px 8px;
-    font-size: 0.7rem;
-    text-align: left;
-  }
-
-  .admin-mod-actions { margin-top: 8px; }
-
-  .admin-ban-flag { color: #f0907a; }
-
-  .admin-warn-flag { color: #e9c46a; }
-
-  .board-frame.fx-mirror { animation: mirrorFlip 0.9s cubic-bezier(0.4, 0, 0.2, 1); }
-
-  @keyframes mirrorFlip {
-    0% { transform: perspective(1200px) rotateY(0deg); }
-    45% { transform: perspective(1200px) rotateY(88deg) scale(0.92); }
-    55% { transform: perspective(1200px) rotateY(-88deg) scale(0.92); }
-    100% { transform: perspective(1200px) rotateY(0deg); }
-  }
-
-  .board-frame.fx-lottery { animation: lotterySpin 0.95s ease-in-out; }
-
-  @keyframes lotterySpin {
-    0% { filter: none; }
-    18% { filter: hue-rotate(70deg) saturate(2.2); }
-    36% { filter: hue-rotate(160deg) saturate(2.8); }
-    54% { filter: hue-rotate(250deg) saturate(2.4); }
-    72% { filter: hue-rotate(330deg) saturate(1.8); }
-    100% { filter: none; }
-  }
-
-  .board-frame.fx-pawnstorm { animation: pawnStormShake 0.9s linear; }
-
-  @keyframes pawnStormShake {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    12% { transform: translate(-4px, 5px) rotate(-0.4deg); }
-    26% { transform: translate(5px, -4px) rotate(0.45deg); }
-    40% { transform: translate(-5px, 3px) rotate(-0.3deg); }
-    56% { transform: translate(4px, 5px) rotate(0.3deg); }
-    74% { transform: translate(-3px, -3px) rotate(-0.2deg); }
-    88% { transform: translate(2px, 2px); }
-  }
-
-  .board-frame.fx-armies { animation: armiesJump 0.95s cubic-bezier(0.4, 0, 0.5, 1.3); }
-
-  @keyframes armiesJump {
-    0% { transform: translateY(0) scale(1); }
-    26% { transform: translateY(-28px) scale(0.965); }
-    52% { transform: translateY(26px) scale(0.965); }
-    72% { transform: translateY(-9px) scale(1.005); }
-    100% { transform: translateY(0) scale(1); }
-  }
-
-  .board-frame.fx-timeskip { animation: timeSkipSweep 0.95s ease-in-out; }
-
-  @keyframes timeSkipSweep {
-    0% { transform: translateX(0); filter: none; }
-    22% { transform: translateX(-14px) skewX(-2deg); filter: brightness(1.35) blur(1px); }
-    48% { transform: translateX(12px) skewX(2deg); filter: brightness(1.5); }
-    70% { transform: translateX(-6px); filter: brightness(1.15); }
-    100% { transform: translateX(0); filter: none; }
-  }
 
   body.nuke-shake { animation: nukeShake 0.55s ease-in-out; }
 
@@ -1591,47 +1509,6 @@ var Chess=function(r){var u="b",s="w",l=-1,_="p",A="n",S="b",m="r",y="q",p="k",t
   body[data-theme="ascension"] img.piece-417db[data-piece^="w"] { filter: brightness(1.6) drop-shadow(0 0 12px #ffea00); }
   body[data-theme="ascension"] img.piece-417db[data-piece^="b"] { filter: grayscale(1) brightness(0.1) drop-shadow(0 0 15px #000); }
 
-  body[data-theme="arctic"] .white-1e1d7 { background-color: #dff2ff !important; }
-  body[data-theme="arctic"] .black-3c85d { background-color: #1f4b6e !important; }
-  body[data-theme="arctic"] img.piece-417db[data-piece^="w"] { filter: brightness(1.2) drop-shadow(0 0 7px rgba(170,235,255,0.9)); }
-  body[data-theme="arctic"] img.piece-417db[data-piece^="b"] { filter: grayscale(0.4) brightness(0.3) drop-shadow(0 0 8px #8fe4ff); }
-
-  body[data-theme="sunset"] .white-1e1d7 { background: linear-gradient(135deg, #ffd7a8, #ff9f6e) !important; }
-  body[data-theme="sunset"] .black-3c85d { background: linear-gradient(135deg, #6d2a6b, #331446) !important; }
-  body[data-theme="sunset"] img.piece-417db[data-piece^="w"] { filter: sepia(0.5) saturate(2) brightness(1.25) drop-shadow(0 0 6px rgba(255,235,200,0.85)); }
-  body[data-theme="sunset"] img.piece-417db[data-piece^="b"] { filter: sepia(0.7) hue-rotate(280deg) saturate(3) brightness(0.35) drop-shadow(0 0 7px #ff7bd5); }
-
-  body[data-theme="blueprint"] { background-color: #04101d; }
-  body[data-theme="blueprint"] h1, body[data-theme="blueprint"] #status { color: #8fe4ff; }
-  body[data-theme="blueprint"] .white-1e1d7,
-  body[data-theme="blueprint"] .black-3c85d {
-    background-image: linear-gradient(rgba(120,220,255,0.28) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(120,220,255,0.28) 1px, transparent 1px) !important;
-    background-size: 16px 16px !important;
-  }
-  body[data-theme="blueprint"] .white-1e1d7 { background-color: #0d3556 !important; }
-  body[data-theme="blueprint"] .black-3c85d { background-color: #072338 !important; }
-  body[data-theme="blueprint"] img.piece-417db[data-piece^="w"] { filter: brightness(1.7) drop-shadow(0 0 6px #9fe9ff); }
-  body[data-theme="blueprint"] img.piece-417db[data-piece^="b"] { filter: brightness(0.35) drop-shadow(0 0 6px #37b6ff); }
-
-  body[data-theme="candy"] .white-1e1d7 { background-color: #ffe1ee !important; }
-  body[data-theme="candy"] .black-3c85d { background-color: #9be7ef !important; }
-  body[data-theme="candy"] img.piece-417db[data-piece^="w"] { filter: drop-shadow(0 0 6px #ff9ecb) brightness(1.2); }
-  body[data-theme="candy"] img.piece-417db[data-piece^="b"] { filter: sepia(0.6) hue-rotate(130deg) saturate(2) brightness(0.4) drop-shadow(0 0 5px #0aa6bf); }
-
-  body[data-theme="marble"] .white-1e1d7 { background: linear-gradient(160deg, #ffffff, #e6e3dd) !important; }
-  body[data-theme="marble"] .black-3c85d { background: linear-gradient(160deg, #7a7f88, #565b63) !important; }
-  body[data-theme="marble"] img.piece-417db[data-piece^="w"] { filter: brightness(1.35) drop-shadow(0 2px 4px rgba(120,120,120,0.8)); }
-  body[data-theme="marble"] img.piece-417db[data-piece^="b"] { filter: grayscale(1) brightness(0.25) drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
-
-  body[data-theme="neon"] { background-color: #04040a; }
-  body[data-theme="neon"] h1 { color: #ff66e8; text-shadow: 0 0 14px rgba(255,102,232,0.7); }
-  body[data-theme="neon"] .info, body[data-theme="neon"] #status { color: #7dfcff; }
-  body[data-theme="neon"] .white-1e1d7 { background-color: #101026 !important; box-shadow: inset 0 0 12px rgba(0,255,242,0.35); }
-  body[data-theme="neon"] .black-3c85d { background-color: #000000 !important; box-shadow: inset 0 0 12px rgba(255,0,200,0.4); }
-  body[data-theme="neon"] img.piece-417db[data-piece^="w"] { filter: brightness(1.6) drop-shadow(0 0 8px #00fff2); }
-  body[data-theme="neon"] img.piece-417db[data-piece^="b"] { filter: brightness(0.3) drop-shadow(0 0 9px #ff00cc); }
-
   /* ---------- Responsive ---------- */
 
   /* Short windows: trim the chrome so the board still gets room. */
@@ -2104,7 +1981,7 @@ var Chess=function(r){var u="b",s="w",l=-1,_="p",A="n",S="b",m="r",y="q",p="k",t
 
     <div class="admin-phrases">
       <h3>Chat phrasebook</h3>
-      <p class="admin-note">Every local chat trick, in the order the game checks them. Online matches ignore all of them. The last five only answer to the administrator account.</p>
+      <p class="admin-note">Every local chat trick, in the order the game checks them. Online matches ignore all of them.</p>
       <ul class="phrase-list">
         <li><code>I like nuking people</code><span>3D tactical nuke. Every enemy piece dies, their king survives, you keep the move.</span></li>
         <li><code>Double trouble</code><span>Clones every non-king piece for both sides onto the nearest free square. Also: double the pieces, clone army.</span></li>
@@ -2117,11 +1994,6 @@ var Chess=function(r){var u="b",s="w",l=-1,_="p",A="n",S="b",m="r",y="q",p="k",t
         <li><code>Identity crisis</code><span>Every piece changes colour, kings included. Also: swap colours, swap colors, invert.</span></li>
         <li><code>Rewind</code><span>Undoes every move in the game back to the start. Also: take it back, undo everything.</span></li>
         <li><code>Teleport</code><span>The two kings trade squares through portals. Also: king swap, beam me up.</span></li>
-        <li><code>Time skip</code><span><em class="phrase-only">admin</em>Six random legal moves play themselves, board sweeping sideways. Also: fast forward.</span></li>
-        <li><code>Pawn storm</code><span><em class="phrase-only">admin</em>Every rook, knight, bishop and queen is swept off the board. Only pawns and kings remain.</span></li>
-        <li><code>Pawn lottery</code><span><em class="phrase-only">admin</em>Every pawn becomes a random queen, rook, bishop or knight. Also: lucky dip.</span></li>
-        <li><code>Mirror</code><span><em class="phrase-only">admin</em>The whole position reflects across the middle file, a swapping with h.</span></li>
-        <li><code>Swap armies</code><span><em class="phrase-only">admin</em>Both armies jump to the opposite half of the board with colours unchanged. Also: trade halves.</span></li>
       </ul>
     </div>
   </div>
@@ -2227,7 +2099,6 @@ var Chess=function(r){var u="b",s="w",l=-1,_="p",A="n",S="b",m="r",y="q",p="k",t
     <h4>Chat commands</h4>
     <p class="setting-hint">Type one of these in table talk during a local game. Online matches ignore them.</p>
     <p class="setting-hint">"I like nuking people", "Double trouble", "Knight rush", "Promotion party", "Flip it", "I win", "Gravity", "Shuffle up", "Identity crisis", "Rewind", "Teleport".</p>
-    <p class="setting-hint">Admin only: "Time skip", "Pawn storm", "Pawn lottery", "Mirror", "Swap armies".</p>
     <p class="setting-hint">The full phrasebook with every alternative wording lives in the Admin console (duckman).</p>
   </div>
 
@@ -2319,7 +2190,7 @@ const cors = {
 
 const defaults = {
   pvp: { wins: 0, losses: 0 },
-  bot: { "400": 0, "800": 0, "1200": 0, "2400": 0, "3000": 0, points: 0 },
+  bot: { "400": 0, "800": 0, "1200": 0, points: 0 },
   inventory: ["default"],
   theme: "default"
 };
@@ -2991,7 +2862,7 @@ export default {
             pvp.overrideWinRate = value;
           } else return error("Invalid PvP stat.");
         } else if (body.type === "bot") {
-          if (!["400", "800", "1200", "2400", "3000", "points"].includes(body.stat)) return error("Invalid bot stat.");
+          if (!["400", "800", "1200", "points"].includes(body.stat)) return error("Invalid bot stat.");
           bot[body.stat] = value;
         } else return error("Invalid stat type.");
 
@@ -7638,7 +7509,7 @@ export default {
   var currentAccountData = {
     username: "",
     pvp: { wins: 0, losses: 0 },
-    bot: { "400": 0, "800": 0, "1200": 0, "2400": 0, "3000": 0, points: 0 },
+    bot: { "400": 0, "800": 0, "1200": 0, points: 0 },
     inventory: ["default"],
     theme: "default"
   };
@@ -7746,13 +7617,7 @@ export default {
     { id: "steampunk", name: "Steampunk", cost: 350, desc: "Brass, copper and iron.", c1: "#d4a373", c2: "#4a2511" },
     { id: "galaxy", name: "Cosmic Galaxy", cost: 500, desc: "Animated space board.", c1: "#481b7a", c2: "#070114" },
     { id: "glitch", name: "Glitch Void", cost: 800, desc: "Chromatic aberration.", c1: "#222222", c2: "#000000" },
-    { id: "ascension", name: "Ascension", cost: 1000, desc: "Blinding holy light.", c1: "#ffffff", c2: "#f0f0f0" },
-    { id: "arctic", name: "Arctic Drift", cost: 90, desc: "Frozen blues and white ice.", c1: "#dff2ff", c2: "#1f4b6e" },
-    { id: "sunset", name: "Sunset Ridge", cost: 140, desc: "Orange dusk into deep violet.", c1: "#ffb26b", c2: "#4b1d52" },
-    { id: "blueprint", name: "Blueprint", cost: 190, desc: "Engineer's grid on drafting blue.", c1: "#0d3556", c2: "#072338" },
-    { id: "candy", name: "Candy Shop", cost: 210, desc: "Pink and mint sugar board.", c1: "#ffe1ee", c2: "#9be7ef" },
-    { id: "marble", name: "Marble Hall", cost: 300, desc: "Polished stone and pale gold.", c1: "#ffffff", c2: "#565b63" },
-    { id: "neon", name: "Neon Grid", cost: 450, desc: "Black board, cyan and magenta glow.", c1: "#101026", c2: "#000000" }
+    { id: "ascension", name: "Ascension", cost: 1000, desc: "Blinding holy light.", c1: "#ffffff", c2: "#f0f0f0" }
   ];
 
   // ==========================================
@@ -7786,7 +7651,7 @@ export default {
         username: currentUser,
         password: currentPassword,
         pvp: currentAccountData.pvp || { wins: 0, losses: 0 },
-        bot: currentAccountData.bot || { "400": 0, "800": 0, "1200": 0, "2400": 0, "3000": 0, points: 0 },
+        bot: currentAccountData.bot || { "400": 0, "800": 0, "1200": 0, points: 0 },
         inventory: currentAccountData.inventory || ["default"],
         theme: currentAccountData.theme || "default"
       });
@@ -7807,10 +7672,9 @@ export default {
 
   function recordBotWin(difficulty) {
     if (!currentUser || !currentPassword) return;
-    if (!currentAccountData.bot) currentAccountData.bot = { "400": 0, "800": 0, "1200": 0, "2400": 0, "3000": 0, points: 0 };
+    if (!currentAccountData.bot) currentAccountData.bot = { "400": 0, "800": 0, "1200": 0, points: 0 };
     currentAccountData.bot[difficulty] = (currentAccountData.bot[difficulty] || 0) + 1;
-    var rewardTable = { "400": 1, "800": 5, "1200": 10, "2400": 25, "3000": 60 };
-    var ptsAdd = rewardTable[difficulty] || 1;
+    var ptsAdd = difficulty === "400" ? 1 : difficulty === "800" ? 5 : 10;
     currentAccountData.bot.points = (currentAccountData.bot.points || 0) + ptsAdd;
     syncUserDataToCloud();
   }
@@ -7856,21 +7720,19 @@ export default {
         }
       }
     } else {
-      headHtml = "<tr><th>Player</th><th>400</th><th>800</th><th>1200</th><th>GM</th><th>MAX</th><th>Pts</th></tr>";
+      headHtml = "<tr><th>Player</th><th>400</th><th>800</th><th>1200</th><th>Pts</th></tr>";
 
       var botRows = allPlayersCache.map(function (row) {
         var bot = row.bot || {};
         var e4 = bot["400"] || 0;
         var e8 = bot["800"] || 0;
         var e12 = bot["1200"] || 0;
-        var e24 = bot["2400"] || 0;
-        var e30 = bot["3000"] || 0;
-        var pts = bot.points !== undefined ? bot.points : e4 * 1 + e8 * 5 + e12 * 10 + e24 * 25 + e30 * 60;
-        return { user: row.username, e4: e4, e8: e8, e12: e12, e24: e24, e30: e30, pts: pts };
+        var pts = bot.points !== undefined ? bot.points : e4 * 1 + e8 * 5 + e12 * 10;
+        return { user: row.username, e4: e4, e8: e8, e12: e12, pts: pts };
       }).sort(function (a, b) { return b.pts - a.pts; });
 
       if (botRows.length === 0) {
-        rowsHtml = '<tr><td colspan="7" class="table-note">No bot victories yet.</td></tr>';
+        rowsHtml = '<tr><td colspan="5" class="table-note">No bot victories yet.</td></tr>';
       } else {
         for (i = 0; i < botRows.length; i++) {
           var selfBot = botRows[i].user === currentUser;
@@ -7880,8 +7742,6 @@ export default {
             "<td>" + botRows[i].e4 + "</td>" +
             "<td>" + botRows[i].e8 + "</td>" +
             "<td>" + botRows[i].e12 + "</td>" +
-            "<td>" + botRows[i].e24 + "</td>" +
-            "<td>" + botRows[i].e30 + "</td>" +
             "<td><strong>" + botRows[i].pts + "</strong></td>" +
             "</tr>";
         }
@@ -8081,10 +7941,6 @@ export default {
       .then(function (result) {
         finishSignIn(result, password);
         toast("Signed in as " + username + ".", "success");
-        if (result.warnings) {
-          toast("Admin warning (" + result.warnings + (result.warnings === 1 ? "" : "s") + "): " +
-            (result.warningNote || "Keep the table civil."), "warn");
-        }
       })
       .catch(function (err) { authError(err.message || "Could not sign in."); })
       .then(function () { $("#login-btn").prop("disabled", false); });
@@ -8244,13 +8100,6 @@ export default {
       var passwordText = account.passwordState === "hashed"
         ? "hashed with PBKDF2, cannot be shown"
         : account.passwordState === "legacy" ? "old storage format" : "not set";
-      var banUntil = account.bannedUntil ? String(account.bannedUntil) : "";
-      var banLabel = !banUntil ? "" : banUntil === "forever"
-        ? "Banned permanently"
-        : "Banned until " + new Date(banUntil).toLocaleString();
-      var warningLabel = account.warnings
-        ? "Warnings: " + account.warnings + (account.warningNote ? " (" + account.warningNote + ")" : "")
-        : "";
 
       return '' +
         '<div class="admin-row' + (armed ? " armed" : "") + '">' +
@@ -8262,9 +8111,6 @@ export default {
               " pts · " + account.inventory + " theme" + (account.inventory === 1 ? "" : "s") +
               " · updated " + escapeHtml(updated) + "</span>" +
             '<span class="admin-meta">Password: ' + escapeHtml(passwordText) + "</span>" +
-            (banLabel ? '<span class="admin-meta admin-ban-flag">' + escapeHtml(banLabel) +
-              (account.banReason ? " (" + escapeHtml(account.banReason) + ")" : "") + "</span>" : "") +
-            (warningLabel ? '<span class="admin-meta admin-warn-flag">' + escapeHtml(warningLabel) + "</span>" : "") +
           "</div>" +
           '<div class="admin-row-actions">' +
             '<button type="button" class="btn btn-quiet admin-btn-small" data-admin-reset="' + escapeHtml(account.username) + '">Reset password</button>' +
@@ -8273,30 +8119,6 @@ export default {
               (account.admin ? ' disabled title="Administrator accounts are protected"' : "") + ">" +
               (armed ? "Confirm delete" : "Delete") +
             "</button>" +
-          "</div>" +
-          '<div class="admin-row-actions admin-mod-actions">' +
-            '<select data-ban-select="' + escapeHtml(account.username) + '" aria-label="Ban length"' +
-              (account.admin ? " disabled" : "") + ">" +
-              '<option value="60">1 hour</option>' +
-              '<option value="1440" selected>1 day</option>' +
-              '<option value="10080">7 days</option>' +
-              '<option value="43200">30 days</option>' +
-              '<option value="forever">Forever</option>' +
-            "</select>" +
-            '<button type="button" class="btn btn-orange admin-btn-small" data-admin-ban="' +
-              escapeHtml(account.username) + '"' + (account.admin ? " disabled" : "") + ">Ban</button>" +
-            (banUntil ? '<button type="button" class="btn btn-quiet admin-btn-small" data-admin-unban="' +
-              escapeHtml(account.username) + '">Unban</button>' : "") +
-            '<button type="button" class="btn btn-teal admin-btn-small" data-admin-warn="' +
-              escapeHtml(account.username) + '"' + (account.admin ? " disabled" : "") + ">Warn</button>" +
-            (account.warnings ? '<button type="button" class="btn btn-quiet admin-btn-small" data-admin-clear="' +
-              escapeHtml(account.username) + '">Clear warnings</button>' : "") +
-          "</div>" +
-          '<div class="admin-reset" data-warn-row="' + escapeHtml(account.username) + '" hidden>' +
-            '<input type="text" maxlength="160" placeholder="Warning message (optional)" data-warn-input="' +
-              escapeHtml(account.username) + '">' +
-            '<button type="button" class="btn btn-teal admin-btn-small" data-warn-save="' +
-              escapeHtml(account.username) + '">Send warning</button>' +
           "</div>" +
           '<div class="admin-reset" data-reset-row="' + escapeHtml(account.username) + '" hidden>' +
             '<input type="password" placeholder="New password (6+ characters)" data-reset-input="' +
@@ -8364,68 +8186,6 @@ export default {
       .catch(function (err) { $("#admin-status").text(err.message || "Could not delete that account."); });
   });
 
-  function adminBanMinutes(name) {
-    var value = String($('[data-ban-select="' + name + '"]').val() || "1440");
-    if (value === "forever") return 0;
-    var minutes = Number(value);
-    return Number.isFinite(minutes) && minutes > 0 ? minutes : 1440;
-  }
-
-  $("#admin-list").on("click", "[data-admin-ban]", function () {
-    if ($(this).prop("disabled")) return;
-    var name = $(this).attr("data-admin-ban");
-    var minutes = adminBanMinutes(name);
-    $("#admin-status").text((minutes ? "Banning " : "Banning permanently ") + name + "...");
-    workerRequest("/admin/ban", "POST", adminCredentialBody({ target: name, minutes: minutes }))
-      .then(function () {
-        toast(minutes ? "Banned " + name + " for " + minutes + " minutes." : "Banned " + name + " permanently.", "success");
-        loadAdminAccounts();
-      })
-      .catch(function (err) { $("#admin-status").text(err.message || "Could not ban that player."); });
-  });
-
-  $("#admin-list").on("click", "[data-admin-unban]", function () {
-    var name = $(this).attr("data-admin-unban");
-    $("#admin-status").text("Unbanning " + name + "...");
-    workerRequest("/admin/unban", "POST", adminCredentialBody({ target: name }))
-      .then(function () {
-        toast("Unbanned " + name + ".", "success");
-        loadAdminAccounts();
-      })
-      .catch(function (err) { $("#admin-status").text(err.message || "Could not unban that player."); });
-  });
-
-  $("#admin-list").on("click", "[data-admin-warn]", function () {
-    if ($(this).prop("disabled")) return;
-    var name = $(this).attr("data-admin-warn");
-    var row = $('[data-warn-row="' + name + '"]');
-    row.prop("hidden", !row.prop("hidden"));
-    if (!row.prop("hidden")) row.find("input").focus();
-  });
-
-  $("#admin-list").on("click", "[data-warn-save]", function () {
-    var name = $(this).attr("data-warn-save");
-    var note = String($('[data-warn-input="' + name + '"]').val() || "").trim();
-    $("#admin-status").text("Warning " + name + "...");
-    workerRequest("/admin/warn", "POST", adminCredentialBody({ target: name, note: note }))
-      .then(function (result) {
-        toast("Warned " + name + " (" + result.warnings + " total).", "success");
-        loadAdminAccounts();
-      })
-      .catch(function (err) { $("#admin-status").text(err.message || "Could not warn that player."); });
-  });
-
-  $("#admin-list").on("click", "[data-admin-clear]", function () {
-    var name = $(this).attr("data-admin-clear");
-    $("#admin-status").text("Clearing warnings for " + name + "...");
-    workerRequest("/admin/clear-warning", "POST", adminCredentialBody({ target: name }))
-      .then(function () {
-        toast("Cleared warnings for " + name + ".", "success");
-        loadAdminAccounts();
-      })
-      .catch(function (err) { $("#admin-status").text(err.message || "Could not clear those warnings."); });
-  });
-
   function syncSettingsUI() {
     $("[data-setting]").each(function () {
       var key = $(this).attr("data-setting");
@@ -8476,7 +8236,7 @@ export default {
     currentAccountData = {
       username: "",
       pvp: { wins: 0, losses: 0 },
-      bot: { "400": 0, "800": 0, "1200": 0, "2400": 0, "3000": 0, points: 0 },
+      bot: { "400": 0, "800": 0, "1200": 0, points: 0 },
       inventory: ["default"],
       theme: "default"
     };
@@ -8804,65 +8564,8 @@ export default {
       .map(function (entry) { return entry.move; });
   }
 
-  // Strong profiles keep resolving captures past the nominal depth, so they
-  // never stop the search in the middle of an exchange.
-  // A soft deadline: a search that runs out of time scores the position it has
-  // reached instead of recursing further, so the bot always answers promptly and
-  // every move is still undone cleanly.
-  var searchDeadline = 0;
-
-  function outOfTime() {
-    return searchDeadline > 0 && Date.now() > searchDeadline;
-  }
-
-  function quiesce(g, alpha, beta, depth) {
-    if (outOfTime()) return evaluateBoard(g);
-    var stand = evaluateBoard(g);
-    if (depth === 0 || g.game_over()) return stand;
-
-    if (g.turn() === "w") {
-      if (stand >= beta) return beta;
-      if (stand > alpha) alpha = stand;
-    } else {
-      if (stand <= alpha) return alpha;
-      if (stand < beta) beta = stand;
-    }
-
-    var moves = orderMoves(g, g.moves({ verbose: true }).filter(function (move) {
-      return move.captured || move.promotion;
-    }));
-    if (!moves.length) return stand;
-
-    if (g.turn() === "w") {
-      var best = stand;
-      for (var i = 0; i < moves.length; i++) {
-        g.move(moves[i]);
-        best = Math.max(best, quiesce(g, alpha, beta, depth - 1));
-        g.undo();
-        alpha = Math.max(alpha, best);
-        if (beta <= alpha) break;
-      }
-      return best;
-    }
-
-    var worst = stand;
-    for (var j = 0; j < moves.length; j++) {
-      g.move(moves[j]);
-      worst = Math.min(worst, quiesce(g, alpha, beta, depth - 1));
-      g.undo();
-      beta = Math.min(beta, worst);
-      if (beta <= alpha) break;
-    }
-    return worst;
-  }
-
   function alphaBeta(g, depth, alpha, beta) {
-    if (outOfTime()) return evaluateBoard(g);
-    if (depth === 0 || g.game_over()) {
-      return searchProfile && searchProfile.quiesce
-        ? quiesce(g, alpha, beta, searchProfile.quiesceDepth || 2)
-        : evaluateBoard(g);
-    }
+    if (depth === 0 || g.game_over()) return evaluateBoard(g);
 
     var moves = orderMoves(g, g.moves({ verbose: true }));
     if (moves.length === 0) return evaluateBoard(g);
@@ -8895,28 +8598,21 @@ export default {
     if (moves.length === 0) return null;
 
     // Shuffle so equal-valued moves are not always played in the same order.
-    // The final profile skips this: identical positions must give identical moves,
-    // which is what makes two copies of it draw instead of one winning.
-    if (!(searchProfile && searchProfile.deterministic)) {
-      for (var k = moves.length - 1; k > 0; k--) {
-        var j = Math.floor(Math.random() * (k + 1));
-        var tmp = moves[k];
-        moves[k] = moves[j];
-        moves[j] = tmp;
-      }
+    for (var k = moves.length - 1; k > 0; k--) {
+      var j = Math.floor(Math.random() * (k + 1));
+      var tmp = moves[k];
+      moves[k] = moves[j];
+      moves[j] = tmp;
     }
     moves = orderMoves(g, moves);
 
     var whiteToMove = g.turn() === "w";
-    var deterministic = !!(searchProfile && searchProfile.deterministic);
     var alpha = -Infinity;
     var beta = Infinity;
     var scored = [];
 
     for (var i = 0; i < moves.length; i++) {
       g.move(moves[i]);
-      // The shuffle is skipped for a deterministic profile, so the move order is
-      // fixed and the same position always produces the same scored values.
       var value = alphaBeta(g, depth - 1, alpha, beta);
       g.undo();
       scored.push({ move: moves[i], value: value });
@@ -8935,14 +8631,6 @@ export default {
       return Math.abs(entry.value - bestValue) <= window;
     });
 
-    // The deterministic profile always takes the same tied move, so an identical
-    // position always gets an identical reply and two copies of it draw.
-    if (deterministic) {
-      candidates.sort(function (a, b) {
-        return a.move.san < b.move.san ? -1 : a.move.san > b.move.san ? 1 : 0;
-      });
-      return candidates[0].move;
-    }
     return candidates[Math.floor(Math.random() * candidates.length)].move;
   }
 
@@ -8959,41 +8647,12 @@ export default {
     }
 
     searchProfile = currentAi;
-    // The deterministic profile never uses the deadline: an identical position
-    // must always produce an identical move.
-    searchDeadline = currentAi && currentAi.budget && !currentAi.deterministic
-      ? Date.now() + currentAi.budget
-      : 0;
-
-    // Deep profiles search shallower first, then go deeper while time remains,
-    // so a slow machine still returns a strong move quickly.
-    var move;
-    if (currentAi && currentAi.depth >= 4) {
-      var floorDepth = Math.max(2, (currentAi.minDepth || 3) - 1);
-      var started = Date.now();
-      var deadline = started + (currentAi.budget || 1200);
-      move = chooseRootMove(game, floorDepth, currentAi.slack || 0);
-      var spent = Date.now() - started;
-      for (var depth = floorDepth + 1; depth <= currentAi.depth; depth++) {
-        // Each extra ply costs roughly five times the last one. Do not start a
-        // search that would obviously blow past the budget.
-        var first = depth === floorDepth + 1;
-        if (!first && Date.now() + spent * 5 > deadline + 400) break;
-        var depthStart = Date.now();
-        var deeper = chooseRootMove(game, depth, currentAi.slack || 0);
-        if (deeper) move = deeper;
-        spent = Date.now() - depthStart;
-      }
-    } else {
-      move = chooseRootMove(
-        game,
-        currentAi ? currentAi.depth : 2,
-        currentAi ? currentAi.slack : 0
-      );
-    }
-
+    var move = chooseRootMove(
+      game,
+      currentAi ? currentAi.depth : 2,
+      currentAi ? currentAi.slack : 0
+    );
     searchProfile = null;
-    searchDeadline = 0;
     return move;
   }
 
@@ -9193,7 +8852,6 @@ export default {
     input.value = "";
 
     var easterEgg = matchEasterEgg(text);
-    if (easterEgg && !eggAllowedFor(easterEgg)) easterEgg = null;
 
     if (gameMode === "online") {
       if (easterEgg) toast("Chat tricks are local only. Online matches stay honest.", "warn");
@@ -9515,85 +9173,6 @@ export default {
     return { fen: gridToFen(parsed.grid, parsed.turn, parsed.fullmove), swapped: true };
   }
 
-  // Reflects the whole position across the middle file: a <-> h.
-  function mirroredFen(fen) {
-    var parsed = fenToGrid(fen);
-    var changed = 0;
-    parsed.grid = parsed.grid.map(function (line) {
-      var out = line.slice().reverse();
-      for (var i = 0; i < 8; i++) {
-        if ((out[i] || null) !== (line[i] || null)) changed++;
-      }
-      return out;
-    });
-    return { fen: gridToFen(parsed.grid, parsed.turn, parsed.fullmove), changed: changed };
-  }
-
-  // Every pawn spins the wheel and becomes a queen, rook, bishop or knight.
-  function lotteryFen(fen, random) {
-    random = random || Math.random;
-    var kinds = ["q", "r", "b", "n"];
-    var changed = 0;
-    var parsed = fenToGrid(fen);
-    parsed.grid = parsed.grid.map(function (line) {
-      return line.map(function (ch) {
-        if (!ch || ch.toLowerCase() !== "p") return ch;
-        var kind = kinds[Math.floor(random() * kinds.length)];
-        changed++;
-        return ch === ch.toUpperCase() ? kind.toUpperCase() : kind;
-      });
-    });
-    return { fen: gridToFen(parsed.grid, parsed.turn, parsed.fullmove), changed: changed };
-  }
-
-  // Sweeps every officer off the board, leaving only pawns and kings.
-  function pawnStormFen(fen) {
-    var removed = 0;
-    var parsed = fenToGrid(fen);
-    parsed.grid = parsed.grid.map(function (line) {
-      return line.map(function (ch) {
-        if (!ch) return null;
-        var kind = ch.toLowerCase();
-        if (kind === "p" || kind === "k") return ch;
-        removed++;
-        return null;
-      });
-    });
-    return { fen: gridToFen(parsed.grid, parsed.turn, parsed.fullmove), removed: removed };
-  }
-
-  // Sends every piece to the mirrored rank on the other half of the board.
-  // Colours stay put, so both armies trade home territory.
-  function swappedArmiesFen(fen) {
-    var parsed = fenToGrid(fen);
-    var out = parsed.grid.map(function () { return [null, null, null, null, null, null, null, null]; });
-    var changed = 0;
-    for (var r = 0; r < 8; r++) {
-      for (var f = 0; f < 8; f++) {
-        var ch = parsed.grid[r][f];
-        if (!ch) continue;
-        out[7 - r][f] = ch;
-        if (7 - r !== r) changed++;
-      }
-    }
-    return { fen: gridToFen(out, parsed.turn, parsed.fullmove), changed: changed };
-  }
-
-  // Plays a few random legal moves forward. Uses a probe game so the animation
-  // finishes before the real board changes.
-  function timeSkipFen(fen, plies, random) {
-    random = random || Math.random;
-    var probe = new Chess(fen);
-    var played = 0;
-    for (var i = 0; i < plies && !probe.game_over(); i++) {
-      var legal = probe.moves();
-      if (!legal.length) break;
-      probe.move(legal[Math.floor(random() * legal.length)]);
-      played++;
-    }
-    return { fen: probe.fen(), played: played };
-  }
-
   function applyGridFen(result) {
     game.load(result.fen);
     board.position(game.fen());
@@ -9765,8 +9344,7 @@ export default {
   function clearBoardFx() {
     var frame = document.querySelector(".board-frame");
     if (!frame) return;
-    frame.classList.remove("fx-gravity", "fx-shuffle", "fx-invert", "fx-rewind",
-      "fx-mirror", "fx-lottery", "fx-pawnstorm", "fx-armies", "fx-timeskip");
+    frame.classList.remove("fx-gravity", "fx-shuffle", "fx-invert", "fx-rewind");
   }
 
   function portalBurst(square) {
@@ -9907,128 +9485,6 @@ export default {
     return true;
   }
 
-  function mirrorEgg() {
-    var result = mirroredFen(game.fen());
-    if (!result.changed) {
-      toast("The board already mirrors itself.", "warn");
-      return false;
-    }
-    cinematicBusy = true;
-    var frame = document.querySelector(".board-frame");
-    if (frame) frame.classList.add("fx-mirror");
-    tone(560, 0.18, "sine", 0.05);
-    window.setTimeout(function () { tone(280, 0.32, "sine", 0.05); }, 210);
-    window.setTimeout(function () { applyGridFen(result); }, 430);
-    window.setTimeout(function () {
-      clearBoardFx();
-      cinematicBusy = false;
-      toast("Mirror: " + result.changed + " squares reflected across the middle file.", "success");
-    }, 1150);
-    return true;
-  }
-
-  function lotteryEgg() {
-    var result = lotteryFen(game.fen());
-    if (!result.changed) {
-      toast("There are no pawns to spin.", "warn");
-      return false;
-    }
-    cinematicBusy = true;
-    var frame = document.querySelector(".board-frame");
-    if (frame) frame.classList.add("fx-lottery");
-    [380, 470, 560, 650].forEach(function (freq, index) {
-      window.setTimeout(function () { tone(freq, 0.09, "square", 0.05); }, index * 120);
-    });
-    window.setTimeout(function () { applyGridFen(result); }, 430);
-    window.setTimeout(function () {
-      clearBoardFx();
-      cinematicBusy = false;
-      if (!gameOverProcessed) {
-        toast("Pawn lottery: " + result.changed + " pawns became queens, rooks, bishops or knights.", "success");
-      }
-    }, 1150);
-    return true;
-  }
-
-  function pawnStormEgg() {
-    var result = pawnStormFen(game.fen());
-    if (!result.removed) {
-      toast("Only pawns and kings are left already.", "warn");
-      return false;
-    }
-    cinematicBusy = true;
-    var frame = document.querySelector(".board-frame");
-    if (frame) frame.classList.add("fx-pawnstorm");
-    tone(150, 0.4, "sawtooth", 0.09);
-    window.setTimeout(function () { tone(90, 0.5, "square", 0.07); }, 240);
-    window.setTimeout(function () { applyGridFen(result); }, 400);
-    window.setTimeout(function () {
-      clearBoardFx();
-      cinematicBusy = false;
-      if (!gameOverProcessed) {
-        toast("Pawn storm: " + result.removed + " officers swept away. Only pawns and kings remain.", "success");
-      }
-    }, 1150);
-    return true;
-  }
-
-  function armiesEgg() {
-    var result = swappedArmiesFen(game.fen());
-    if (!result.changed) {
-      toast("Both armies already hold the same ground.", "warn");
-      return false;
-    }
-    cinematicBusy = true;
-    var frame = document.querySelector(".board-frame");
-    if (frame) frame.classList.add("fx-armies");
-    tone(200, 0.28, "triangle", 0.06);
-    window.setTimeout(function () { tone(420, 0.28, "triangle", 0.05); }, 260);
-    window.setTimeout(function () { applyGridFen(result); }, 470);
-    window.setTimeout(function () {
-      clearBoardFx();
-      cinematicBusy = false;
-      if (!gameOverProcessed) {
-        toast("Swap armies: " + result.changed + " pieces crossed to the other half. Colours stayed put.", "success");
-      }
-    }, 1150);
-    return true;
-  }
-
-  function timeSkipEgg() {
-    var result = timeSkipFen(game.fen(), 6);
-    if (!result.played) {
-      toast("No legal moves left to skip to.", "warn");
-      return false;
-    }
-    cinematicBusy = true;
-    var frame = document.querySelector(".board-frame");
-    if (frame) frame.classList.add("fx-timeskip");
-    for (var tick = 0; tick < 4; tick++) {
-      (function (n) {
-        window.setTimeout(function () { tone(420 + n * 140, 0.09, "square", 0.04); }, n * 110);
-      })(tick);
-    }
-    window.setTimeout(function () { applyGridFen(result); }, 470);
-    window.setTimeout(function () {
-      clearBoardFx();
-      cinematicBusy = false;
-      if (!gameOverProcessed) {
-        toast("Time skip: " + result.played + " moves played themselves.", "success");
-        if (gameMode === "bot" && !game.game_over() && game.turn() !== playerColor.charAt(0)) {
-          window.setTimeout(makeBotMove, 350);
-        }
-      }
-    }, 1150);
-    return true;
-  }
-
-  // The newest tricks answer only to the administrator account.
-  var ADMIN_ONLY_EGGS = { mirror: true, lottery: true, pawnstorm: true, armies: true, timeskip: true };
-
-  function eggAllowedFor(key) {
-    return !ADMIN_ONLY_EGGS[key] || !!isAdminUser;
-  }
-
   function matchEasterEgg(text) {
     var line = " " + String(text).toLowerCase().replace(/[^a-z]+/g, " ").replace(/\s+/g, " ").trim() + " ";
     if (line.indexOf("i like nuking people") !== -1) return "nuke";
@@ -10047,11 +9503,6 @@ export default {
         line.indexOf("undo everything") !== -1) return "rewind";
     if (line.indexOf("teleport") !== -1 || line.indexOf("king swap") !== -1 ||
         line.indexOf("beam me up") !== -1) return "teleport";
-    if (line.indexOf("time skip") !== -1 || line.indexOf("fast forward") !== -1) return "timeskip";
-    if (line.indexOf("pawn storm") !== -1) return "pawnstorm";
-    if (line.indexOf("pawn lottery") !== -1 || line.indexOf("lucky dip") !== -1) return "lottery";
-    if (line.indexOf("mirror") !== -1) return "mirror";
-    if (line.indexOf("swap armies") !== -1 || line.indexOf("trade halves") !== -1) return "armies";
     return null;
   }
 
@@ -10099,11 +9550,6 @@ export default {
     if (key === "invert") return invertEgg();
     if (key === "rewind") return rewindEgg();
     if (key === "teleport") return teleportEgg();
-    if (key === "mirror") return mirrorEgg();
-    if (key === "lottery") return lotteryEgg();
-    if (key === "pawnstorm") return pawnStormEgg();
-    if (key === "armies") return armiesEgg();
-    if (key === "timeskip") return timeSkipEgg();
 
     return false;
   }
@@ -10354,17 +9800,6 @@ export default {
       id: "1200", name: "Professor Kade", rating: 1200, mark: "K",
       tagline: "Punishes loose pieces and slow plans",
       reward: 10, depth: 3, blunder: 0, slack: 0, tables: true
-    },
-    {
-      id: "2400", name: "Grandmaster Voss", rating: 2400, mark: "G",
-      tagline: "Sees every exchange through to the end",
-      reward: 25, depth: 4, minDepth: 3, budget: 2600, blunder: 0, slack: 0, tables: true
-    },
-    {
-      id: "3000", name: "The Unbeaten", rating: 3000, mark: "X",
-      tagline: "Plays the same game twice, so it only ever draws itself",
-      reward: 60, depth: 3, blunder: 0, slack: 0, tables: true,
-      quiesce: true, quiesceDepth: 2, deterministic: true
     }
   ];
 
@@ -11024,17 +10459,6 @@ export default {
   var keyBuffer = "";
 
   window.addEventListener("keydown", function (e) {
-    // Panic button: "=" anywhere outside a text field jumps straight to Google.
-    if (e.key === "=" && !e.ctrlKey && !e.metaKey && !e.altKey && !e.shiftKey) {
-      var panicTag = (e.target && e.target.tagName) || "";
-      if (panicTag !== "INPUT" && panicTag !== "TEXTAREA" && panicTag !== "SELECT" &&
-          !(e.target && e.target.isContentEditable)) {
-        e.preventDefault();
-        window.location.replace("https://www.google.com");
-        return;
-      }
-    }
-
     if (e.key === "Tab") {
       var tag = e.target.tagName;
       if (tag === "INPUT" || tag === "SELECT" || tag === "TEXTAREA") return;
